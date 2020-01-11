@@ -1,0 +1,32 @@
+{
+  "name": "hugo-theme-learn",
+  "version": "0.0.0",
+  "description": "This repository contains a theme for [Hugo](https://gohugo.io/), based on great [Grav Learn Theme](https://learn.getgrav.org/).",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivamMg/hugo-theme-learn.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shivamMg/hugo-theme-learn/issues"
+  },
+  "homepage": "https://github.com/shivamMg/hugo-theme-learn#readme",
+  "dependencies": {
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.0.2",
+    "ignore-loader": "^0.1.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "terser-webpack-plugin": "^2.3.2",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.5"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.10"
+  }
+}
