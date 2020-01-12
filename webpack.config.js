@@ -4,7 +4,7 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-// fonts besides these are not included to keep bundle size low
+// fonts besides these are not included to keep bundle size small
 const includedFonts = [
   'Work_Sans_300.woff',
   'fa-solid-900.woff2',
@@ -17,7 +17,7 @@ console.log('included fonts regex:', includedFontsRegex);
 
 module.exports = {
   mode: 'production',
-  // option to exclude mermaid to keep bundle size low
+  // option to exclude mermaid to keep bundle size small
   entry: (process.env.WITH_MERMAID) ? './static/index-with-mermaid.js' : './static/index.js',
   output: {
     filename: 'bundle.js',

@@ -6,6 +6,9 @@
   <title>{{ .Scratch.Get "title" }}</title>
 
    {{ $assetBusting := not .Site.Params.disableAssetsBusting }}
+   {{if .Site.Params.enableAssetsBundling}}
+    <link href="{{"bundle.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
+   {{else}}
     <link href="{{"css/nucleus.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/fontawesome-all.min.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     <link href="{{"css/hybrid.css" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
@@ -16,6 +19,8 @@
     {{with .Site.Params.themeVariant}}
       <link href="{{(printf "css/theme-%s.css" .) | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     {{end}}
+   {{end}}
+
 <style>
     :root #header + #content > #left > #rlblock_left {
       display: none !important;

@@ -27,6 +27,9 @@ Note that some of these parameters are explained in details in other sections of
   # Javascript and CSS cache are automatically busted when new version of site is generated. 
   # Set this to true to disable this behavior (some proxies don't handle well this optimization)
   disableAssetsBusting = false
+  # Javascript, CSS, and font bundles created by webpack are used instead of individual files.
+  # Set this to true to enable this behavior. Ensure `npm run build` has been run to create bundles.
+  enableAssetsBundling = false
   # Set this to true to disable copy-to-clipboard button for inline code.
   disableInlineCopyToClipBoard = false
   # A title for shortcuts in menu is set by default. Set this to true to disable it. 
